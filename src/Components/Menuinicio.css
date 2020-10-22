@@ -4,24 +4,9 @@
     align-items: center;
     justify-content: center;
 }
-.menuinicio >img{
+img{
     height: 400px;
     width: 400px;
     margin-top: 20px;
     margin-bottom: 20px;
-}
-
-.boton{
-    background-color: #3b61f0;
-    border: none;
-    border-radius: 10px;
-    border-width: none;
-    font-size: 15px;
-    padding: 20px;
-    width: 200px;
-}
-
-.boton:hover{
-    background-color: #5475F1;
-    cursor: pointer;
 }
