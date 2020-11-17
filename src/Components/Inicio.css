@@ -1,11 +1,15 @@
+
 .boton{
     background-color: #3b61f0;
     border: none;
     border-radius: 10px;
     border-width: none;
+    text-decoration: none;
+    color: white;
     font-size: 15px;
     padding: 20px;
     width: 200px;
+    margin-left: 40%;
   }
   
   .boton:hover{

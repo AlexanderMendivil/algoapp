@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Link} from "react-router-dom";
+import {BrowserRouter, Route, Switch} from "react-router-dom";
 
 import './App.css';
 import Algoritmos from "./Components/Algoritmos";
@@ -9,16 +9,14 @@ function App() {
   return (
     <div className="app">
 
-            <Router>
-              <Inicio>
-              <Route 
-              path="/" 
-              component={Inicio}/>
-            <Route 
-            path="/Algoritmos" 
-            component={Algoritmos}/>
-              </Inicio>
-            </Router>
+            <BrowserRouter>
+            <Switch>
+
+              <Route path="/" exact component={Inicio}/>
+              <Route path="/Algoritmos" component={Algoritmos}/>
+
+            </Switch>
+            </BrowserRouter>
     </div>
   );
 }

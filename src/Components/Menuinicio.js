@@ -1,7 +1,6 @@
 import React from "react";
 import "./Menuinicio.css"
 import {Link} from "react-router-dom";
-import Imagen from "../images/3007644.jpg";
 function Menuinicio (){
 
     return(

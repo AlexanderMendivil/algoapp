@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import {useHistory} from "react-router-dom";
 
 import "./Inicio.css";
 
@@ -7,12 +7,17 @@ import Headerbar from "./Headerbar"
 import Menuinicio from "./Menuinicio";
 
 function Inicio(){
-
+    
+    const history = useHistory();
+    
+    const Pagalgo = () =>{
+        history.push("/Algoritmos");
+    }
     return(
-        <div className="">
+        <div className="inicio">
             <Headerbar/>
             <Menuinicio/>
-            <Link to="/Algoritmos"><button className="boton">Algoritmos</button></Link>
+            <button className="boton" onClick={()=> Pagalgo()}>Algoritmos</button>
         </div>
     );
 }
