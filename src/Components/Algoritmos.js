@@ -3,17 +3,19 @@ import React, {useState} from "react";
 import "./Algoritmos.css";
 
 import Headerbar from "./Headerbar";
+import Resultados from "./Resultados";
+import Esqueletoresultados from "./Esqueletoresultados";
+
 function Algoritmos(){
 
     const [numero1, setNumero1] = useState("");
     const [valora, setValora] = useState("");
     const [valorc, setValorc] = useState("");
     const [valorm, setValorm] = useState("");
-    const [valori, setValori] = useState("");
+    const [arrayresultante, setResultados] = useState([]);
 
     const valorPrimero = (e) => {
-        let valor = e.target.value;
-        setNumero1(valor)
+        setNumero1(e.target.value);
     }
 
     const valorA = (e) => {
@@ -26,33 +28,23 @@ function Algoritmos(){
     const valorM = (e) => {
         setValorm(e.target.value);
     }
- 
-    const valorI = (e) => {
-        setValori(e.target.value);
-    }
-
+    
     const calcularLineal = (e) =>{
         e.preventDefault()
         let nextx;
         let r;
-
-        for(let i = 0; i < parseInt(valori); i++){
-
-            nextx = ((parseInt(valora)* parseInt(numero1)) + parseInt(valorc)) % parseInt(valorm)
-            setNumero1(nextx)
-            console.log(nextx)
-            console.log(numero1)
-            r = numero1/(valorm-1)
-            console.log(r)
+        nextx = ((parseInt(valora)* parseInt(numero1)) + parseInt(valorc)) % parseInt(valorm)
+        setNumero1(nextx)
+        r = numero1/(valorm-1)
+         setResultados([...arrayresultante,r])
     }
-
-    }
+    
     return(
         <div className="">
             <Headerbar/>
 
         <div className="algoritmos">
-            <form className="algos"> 
+            <div className="algos"> 
             <h2>Algoritmo Lineal</h2>
             <label>Semilla X</label>
             <input type="text" onChange={valorPrimero}></input>
@@ -66,18 +58,17 @@ function Algoritmos(){
             <label>Valor M</label>
             <input type="text" onChange={valorM}></input>
 
-            <label>Cuantos numeros quiere</label>
-            <input type="text" onChange={valorI}></input>
-
             <h3>RESULTADO</h3>
-            <div>
+              
+                
+               <Esqueletoresultados>
                 {
-
+                      arrayresultante.map((item, key) => <Resultados  resultado ={item} key={Math.random(1,100)}/>) 
                 }
-            </div>
+                </Esqueletoresultados>
 
-            <button type="submit" onClick={calcularLineal}>CALCULAR</button>
-            </form> 
+            <button  onClick={calcularLineal}>CALCULAR</button>
+            </div> 
 
             <form className="algos"> 
             <h2>Algoritmo 2</h2>

@@ -1,10 +1,13 @@
 import React from "react";
+import "./Resultados.css"
 
-function Resultados(){
+function Resultados({resultado}){
 
     return(
         <div>
-            <h4>{}</h4>
+            <li className="resultados">{resultado}</li>
         </div>
     )
 }
+
+export default Resultados;
