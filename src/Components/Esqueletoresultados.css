@@ -1,3 +1,27 @@
+.container{
+    border: 1px solid #D1E8FF;
+    height: 70px;
+    overflow-y: scroll;
+
+}
+.container::-webkit-scrollbar{
+    width: 5px;
+    height: 20px;
+    background-color: #3b61f0;
+    border-radius: 10px;
+}
+
+.container::-webkit-scrollbar-button{
+    width: 3px;
+    height: 3px;
+}
+
+.container::-webkit-scrollbar-thumb{
+    background-color: white;
+    border: 11px none #B7B7B7;
+}
+
+
 .esqueleto{
     list-style-type: none;
 }

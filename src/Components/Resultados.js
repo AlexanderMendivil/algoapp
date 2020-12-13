@@ -1,10 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 import "./Resultados.css"
 
 function Resultados({resultado}){
 
     return(
-        <div>
+        <div className="">
             <li className="resultados">{resultado}</li>
         </div>
     )

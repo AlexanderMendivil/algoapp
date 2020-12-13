@@ -3,7 +3,7 @@ import "./Esqueletoresultados.css";
 function Esqueletoresultados({...props}){
 
     return(
-        <div >
+        <div className="container">
             <ul className="esqueleto">
                 {
                 props.children
